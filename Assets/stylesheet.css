@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.float-left{
+    float: left;
+}
+.clear-left{
+    clear: left;
+}
+nav{
+    height: 80px;
+    background: yellow;
+}
+.cover{
+    height: 332px;
+    background: grey;
+}
+.main-cover{
+    width: 75%;
+    background: cornflowerblue;
+}
+.cover-column{
+    width: 25%;
+    background: coral;
+}
+.content{
+    margin: 0 auto;
+}
+.news{
+    height: 522px;
+}
+.news-block{
+    width: 25%;
+    height: 50%;
+    padding: 12px;
+    background: cyan;
+}
+.funding-box{
+    height: 250px;
+    width: 25%;
+    padding: 12px;
+    background: yellow;
+}
+.article-box{
+    height: 392px;
+    width: 33.3333%;
+    padding: 12px;
+    background: rosybrown;
+}
