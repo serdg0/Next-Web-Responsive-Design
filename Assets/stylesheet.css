@@ -14,9 +14,18 @@ body{
 }
 nav{
     height: 80px;
-    background: yellow;
+    background: white;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+nav li:hover{
+    color: black;
 }
 .cover{
+    margin-top: 80px;
     height: 332px;
     background: grey;
 }
@@ -29,14 +38,14 @@ nav{
     background: coral;
 }
 .content{
-    margin: 0 auto;
+    margin: 0 46px;
 }
 .news{
-    height: 522px;
+    height: auto;
 }
 .news-block{
     width: 25%;
-    height: 50%;
+    height: 200px;;
     padding: 12px;
     background: cyan;
 }
@@ -51,4 +60,40 @@ nav{
     width: 33.3333%;
     padding: 12px;
     background: rosybrown;
+}
+footer{
+    height: 258px;
+    width: auto;
+    background: rgb(37, 36, 36);
+}
+@media screen and (max-width: 767px){   /*Cuando esta chico*/
+    .content{
+        margin: inherit;
+    }
+    .cover-column{
+        height: 66.6666%;
+        width: 100%;
+    }
+    .side-cover{
+        height: 50%;
+    }
+    .main-cover{
+        height: 33.3333%
+    }
+    .news-block, .funding-box, .article-box, .main-cover{
+        float:none;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px){   /*Cuando esta grande*/
+    nav li{
+        width: 130px;
+        height: 48px;
+        list-style-type: none;
+        color: #555;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
