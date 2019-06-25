@@ -20,6 +20,9 @@ body{
 .clear-left{
     clear: left;
 }
+.clear-both{
+    clear: both;
+}
 .flex-center{
     display: flex;
     align-items: center;
@@ -82,19 +85,21 @@ nav li:hover{
     margin-top: 110px;
     height: 75vh;
     max-height: 560px;
-    
+    margin-bottom: 12px;
 }
 .main-cover{
     width: 66.6666%;
-    background: url(./main-cover.jpg) no-repeat;
+    background: url(./main-cover.jpg) no-repeat center;
     background-size: cover;
     height: 100%;
+    z-index: 1;
 }
 .main-gradient{
-    background: transparent url(./cover-gradient.png) no-repeat;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.973)), url(./cover-gradient.png) no-repeat;
     background-size: cover;
     height: 100%;
-    z-index: 4px;
+    width: 100%;
+    position: relative;
 }
 .main-cover img{
     position: relative;
@@ -103,45 +108,90 @@ nav li:hover{
     width: 50%;
 }
 .cover-title{
-    color: hsla(0,0%,100%,.6);
-    position: relative;
+    color: white;
+    width: 75%;
+    margin-bottom: .25em;
+    position: absolute;
+    bottom: 24px;
     left: 24px;
-    bottom: 5px;
+}
+.cover-title a{
+    color: white;
 }
 .cover-title h2{
-    font-size: 56px;
-    color: white;
+    font-size: 40px;
     margin: 0;
     font-weight: bolder;
 }
+.cover-title h5, .side-title h5{
+    margin: 0;
+}
 .credits{
+    padding: 0;
     font-size: 12px;
     line-height: 16px;
     list-style-type: none;
 }
 .credits li{
-    
+    margin-right: 12px;
 }
 .cover-column{
     width: 33.3333%;
     height: 100%;
-    background: coral;
 }
 .side-cover{
-    width: inherit;
+    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(./cover-column.png) no-repeat center;
+    background-size: cover; 
+    width: 100%;
     height: 50%;
+    position: relative;
+}
+.side-title{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    padding: 0 20px;
+}
+.side-title h2{
+    margin: 0;
 }
 .content{
     margin: 0 46px;
 }
+.heading-news{
+    color: #f42;
+    font-weight: 700;
+}
 .news{
     height: auto;
 }
+
 .news-block{
+    padding: 4px;
     width: 25%;
-    height: 200px;;
-    padding: 12px;
-    background: cyan;
+    height: 200px;
+    position: relative;
+}
+.block-heading{
+    position: absolute;
+    bottom: 5px;
+}
+.block-heading-pic{
+    height: 66.5%;
+    background: url(./new.png) no-repeat center;
+    background-size: cover;
+}
+.block-heading span{
+    color: #aaa;
+    font-size: 12px;
+    line-height: 18px;
+}
+.block-heading h3{
+    margin: 0;
+}
+.news-block h3{
+    font-size: 14px;
 }
 .funding-box{
     height: 250px;
@@ -160,12 +210,15 @@ footer{
     width: auto;
     background: rgb(37, 36, 36);
 }
-@media screen and (max-width: 767px){   /*Cuando esta chico*/
+@media screen and (max-width: 767px){   /*Chico*/
     .content{
         margin: inherit;
     }
     .cover{
         margin-top: 78px;
+    }
+    .main-cover, .side-cover{
+        margin-bottom: 8px;
     }
     nav{
         height: auto;
@@ -183,6 +236,21 @@ footer{
     #logito{
         display: block;
     }
+    .main-cover img{
+        display: none;
+    }
+    .main-gradient{
+        background: transparent linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+    }
+    .cover-title, .side-title{
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .cover-title h2{
+        width: inherit;
+        font-size: 20px;
+    }
     .cover-column{
         height: 66.6666%;
         width: 100%;
@@ -190,12 +258,33 @@ footer{
     .side-cover{
         height: 50%;
     }
+    .side-title{
+        padding: 0;
+    }
     .main-cover{
         height: 33.3333%
     }
     .news-block, .funding-box, .article-box, .main-cover{
         float:none;
         width: 100%;
+    }
+    .news-block{
+        position: relative;
+        height: 75px;
+        margin-bottom: 8px;
+    }
+    .block-heading{
+        position: absolute;
+        left: 78px;
+        top: 0;
+        padding-left: 8px;
+        width: 100%;
+    }
+    .block-heading-pic{
+        position: absolute;
+        left: 0;;
+        width: 75px;
+        height: 75px;
     }
     .topnav{
         display: none;
@@ -209,7 +298,35 @@ footer{
         justify-content: center;
     }
 }
-@media screen and (min-width: 768px){   /*Cuando esta grande*/
+@media screen and (min-width: 768px) and (max-width: 1023px){ /*Mediano*/
+    .topnav{
+        display: none;
+    }
+    .podcast{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cover{
+        margin-top: 80px;
+    }
+    .main-cover img{
+        position: relative;
+        top:24px;
+        left: 24px;
+        width: 50%;
+    }
+    .news-block{
+        width: 33.3333%;
+    }
+    .cover-title h2{
+        margin: 0;
+        font-weight: bolder;
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1024px){ /*Grande*/
     .topnav{
         height: 32px;
         margin: 0;
@@ -230,5 +347,11 @@ footer{
     .podcast{
         display: flex;
         align-items: center;
+    }
+    .cover-title h2{
+        font-size: 40px;
+    }
+    .news-block{
+        width: 25%;
     }
 }
