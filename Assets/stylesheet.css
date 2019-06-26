@@ -193,11 +193,65 @@ nav li:hover{
 .news-block h3{
     font-size: 14px;
 }
+.funding-heading{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 24px;
+    color: #f42;
+}
+.funding-heading h1{
+    margin: 0;
+}
+.funding-heading h2{
+    font-size: 16px;
+    margin-bottom: 0;
+}
 .funding-box{
     height: 250px;
     width: 25%;
     padding: 12px;
-    background: yellow;
+}
+.fund-title{
+    position: relative;
+    height: 35%;
+}
+.funding-box ul{
+    height: 38%;
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+.funding-foot{
+    height: 27%;
+    color: #555;
+    font-size: 10px;
+}
+.fund-title img{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 61%;
+}
+.fund-title-1{
+    background: #f4422b;
+    text-align: center;
+}
+.fund-title-1 h3{
+    margin: 0;
+    padding-left: 10px;
+    color: white;
+}
+.fund-title-2{
+    text-align: center;
+    background: #fde9e6;
+}
+.fund-title-2 span{
+    font-size: 12px;
+}
+.funding-box li{
+    
+    margin-bottom: 25px;
 }
 .article-box{
     height: 392px;
@@ -323,6 +377,15 @@ footer{
         margin: 0;
         font-weight: bolder;
         font-size: 28px;
+    }
+    .funding-box{
+        width: 33.3333%;
+    }
+    .funding-heading{
+        display: block;
+    }
+    .nodisplay{
+        display: none;
     }
 }
 
