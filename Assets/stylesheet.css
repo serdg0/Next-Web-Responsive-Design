@@ -1,0 +1,534 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.robot{
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clear-left{
+    clear: left;
+}
+.clear-both{
+    clear: both;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    height: 80px;
+    background: white;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+nav li{
+    height: 50%;
+    list-style-type: none;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav li:hover{
+    color: black;
+}
+.middlenav{
+    height: 48px;
+    margin: 0;
+    padding: 0;
+}
+.middlenav li{
+    display: block;
+    padding: 18px 12px 0 12px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+#search-icon{
+    padding: 16px;
+    border-left: 1px solid rgb(73, 71, 71);
+    height: 100%;
+}
+.logito{
+    margin: 0;
+    height: 100%;
+    background-color: #f42;
+    background: linear-gradient(to bottom right,#c09,#f42 85%);;
+}
+.middlenav img{
+    width: 66px;
+    height: 16px;
+}
+.podcast{
+    background: #fd3;
+    color: black;
+    font-size: 13px;
+    height: 30px;
+}
+.cover{
+    margin-top: 102px;
+    height: 75vh;
+    max-height: 560px;
+    margin-bottom: 12px;
+}
+.main-cover{
+    width: 66.6666%;
+    background: url(./main-cover.jpg) no-repeat center;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+    padding: 8px;
+    background-clip: content-box;
+}
+.main-gradient{
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.973)), url(./cover-gradient.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.main-cover img{
+    position: relative;
+    top:24px;
+    left: 24px;
+    width: 50%;
+}
+.cover-title{
+    color: white;
+    width: 75%;
+    margin-bottom: .25em;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+}
+.cover-title a{
+    color: white;
+}
+.cover-title h2{
+    font-size: 40px;
+    margin: 0;
+    font-weight: bolder;
+}
+.cover-title h5, .side-title h5{
+    margin: 0;
+}
+.credits{
+    padding: 0;
+    font-size: 12px;
+    line-height: 16px;
+    list-style-type: none;
+}
+.credits li{
+    margin-right: 12px;
+}
+.cover-column{
+    width: 33.3333%;
+    height: 100%;
+}
+.side-cover{
+    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(./cover-column.png) no-repeat center;
+    background-size: cover;
+    background-clip: content-box;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    padding: 8px;
+}
+.side-title{
+    color: white;
+    position: absolute;
+    bottom: 12px;
+    left: 4px;
+    padding: 0 20px;
+}
+.side-title h2{
+    margin: 0;
+}
+.content{
+    margin: 0 46px;
+}
+.heading-news{
+    color: #f42;
+    font-weight: 700;
+    margin: 0;
+}
+.news{
+    height: auto;
+}
+
+.news-block{
+    padding: 4px;
+    width: 25%;
+    height: 200px;
+    position: relative;
+}
+.block-heading{
+    position: absolute;
+    bottom: 5px;
+    padding-bottom: 5px;
+}
+.block-heading-pic{
+    height: 66.5%;
+    background: url(./new.png) no-repeat center;
+    background-size: cover;
+}
+.block-heading span{
+    color: #aaa;
+    font-size: 12px;
+    line-height: 18px;
+}
+.block-heading h3{
+    margin: 0;
+}
+.news-block h3{
+    font-size: 14px;
+}
+.funding-heading{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 24px;
+    color: #f42;
+}
+.funding-heading h1{
+    margin: 0;
+}
+.funding-heading h2{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.funding-heading h2 a{
+    color: #f42;
+    text-decoration: none;
+}
+.funding-box{
+    height: 250px;
+    width: 25%;
+    padding: 12px;
+}
+.fund-title{
+    position: relative;
+    height: 35%;
+}
+.funding-box ul{
+    height: 38%;
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+.funding-foot{
+    height: 27%;
+    color: #555;
+    font-size: 10px;
+}
+.fund-title img{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 61%;
+}
+.fund-title-1{
+    background: #f4422b;
+    text-align: center;
+}
+.fund-title-1 h3{
+    margin: 0;
+    padding-left: 10px;
+    color: white;
+}
+.fund-title-2{
+    text-align: center;
+    background: #fde9e6;
+}
+.fund-title-2 span{
+    font-size: 12px;
+}
+.funding-box li{
+    margin-bottom: 25px;
+}
+.article-box{
+    height: 688px;
+    width: 33.3333%;
+    padding: 12px;
+}
+.article-cover{
+    height: 40%;
+    background: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.685)) ,url(./article-cover.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.article-title{
+    color: white;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+}
+.article-title ul{
+    margin: 0;
+}
+.article-title li{
+    font-size: 12px;
+}
+.article-title li a{
+    text-decoration: none;
+    color: white;
+}
+.article-title h1{
+    font-size: 20px;
+    margin: 0;
+}
+.article-sub{
+    background: #fef2f1;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+.article-sub img{
+    width: 96px;
+    height: 96px;
+}
+.article-list{
+    padding: 0;
+    padding-left: 18px;
+}
+.article-list li{
+    color: rgb(85,85,85);
+    font-size: 13px;
+    border-bottom: #555 solid 1px;
+    padding-top: 20px;
+}
+.sub{
+    padding: 10px 14px 0 2px;
+    color: #f4422b;
+}
+.sub span{
+    font-size: 13px;
+    margin: 0;
+}
+.sub h1{
+    font-size: 14px;
+    margin: 0;
+}
+.deal-block-heading{
+    height: 66.5%;
+    background: url(./deal.jpg) no-repeat center;
+    background-size: cover;
+}
+.tachado{
+    text-decoration-line: line-through; 
+}
+.deals-head{
+    display: flex;
+    justify-content: space-between;
+}
+.deals-head a{
+    color: #f42;
+    text-decoration: none;
+    font-size: 16px;
+}
+footer{
+    height: 258px;
+    width: auto;
+    background: black;
+    margin-top: 56px;
+}
+footer span{
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 48.5px;
+}
+.icons{
+    height: 161px;
+    padding: 42px 0 28px 0;
+    color: white;
+    background: #131313;
+}
+.icons li{
+    list-style-type: none;
+    float: left;
+    margin: 0 8px 0 8px;
+}
+@media screen and (max-width: 767px){   /*Chico*/
+    .content{
+        margin: inherit;
+    }
+    .cover{
+        margin-top: 78px;
+    }
+    .main-cover, .side-cover{
+        margin-bottom: 8px;
+        background-clip: padding-box;
+    }
+    nav{
+        height: auto;
+    }
+    .middlenav{
+        margin: 0;
+        height: 48px;
+    }
+    .middlenav li{
+        display: none;
+    }
+    #search-icon{
+        display: block;
+    }
+    #logito{
+        display: block;
+    }
+    .main-cover img{
+        display: none;
+    }
+    .main-gradient{
+        background: transparent linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+    }
+    .cover-title, .side-title{
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .cover-title h2{
+        width: inherit;
+        font-size: 20px;
+    }
+    .cover-column{
+        height: 66.6666%;
+        width: 100%;
+    }
+    .side-cover{
+        height: 50%;
+    }
+    .side-title{
+        padding: 0;
+    }
+    .main-cover{
+        height: 33.3333%
+    }
+    .news-block, .funding-box, .article-box, .main-cover{
+        float:none;
+        width: 100%;
+    }
+    .news-block{
+        position: relative;
+        height: 75px;
+        margin-bottom: 8px;
+    }
+    .block-heading{
+        position: absolute;
+        left: 78px;
+        top: 0;
+        padding-left: 8px;
+        width: 100%;
+    }
+    .block-heading-pic, .deal-block-heading{
+        position: absolute;
+        left: 0;;
+        width: 75px;
+        height: 75px;
+    }
+    .topnav{
+        display: none;
+    }
+    .topnav li{
+        height: inherit;
+    }
+    .podcast{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nodisplay{
+        display: none;
+    }
+    .funding-heading h2 a{
+        display: block;
+    }
+    .funding-heading{
+        display: block;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){ /*Mediano*/
+    .topnav{
+        display: none;
+    }
+    .podcast{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cover{
+        margin-top: 80px;
+    }
+    .main-cover img{
+        position: relative;
+        top:24px;
+        left: 24px;
+        width: 50%;
+    }
+    .news-block{
+        width: 33.3333%;
+    }
+    .cover-title h2{
+        margin: 0;
+        font-weight: bolder;
+        font-size: 28px;
+    }
+    .funding-box{
+        width: 33.3333%;
+    }
+    .funding-heading{
+        display: block;
+    }
+    .article-box{
+        width: 50%;
+    }
+    .nodisplay{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px){ /*Grande*/
+    .topnav{
+        height: 32px;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        background: black;
+        color: hsla(0,0%,100%,.6);
+        font-size: 12px;
+    }
+    .topnav li{
+        margin-left: 12px;
+        margin-top: 8px;
+        color:hsla(0,0%,100%,.6);
+    }
+    .topnav li:hover{
+        color: white;
+    }
+    .podcast{
+        display: flex;
+        align-items: center;
+    }
+    .cover-title h2{
+        font-size: 40px;
+    }
+    .news-block{
+        width: 25%;
+    }
+}
