@@ -17,4 +17,4 @@ This have been done by:
 * [Sergio Diaz](https://github.com/serdg0) 
 
 ### The website
-[Click](https://rawcdn.githack.com/serdg0/Next-Web-Responsive-Design/42da89ea16427dba38e457e1317e8347a649cd3a/index.html) to view project's website
+[Click](https://serdg0.github.io/Next-Web-Responsive-Design/) to view project's website
