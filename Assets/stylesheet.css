@@ -93,6 +93,8 @@ nav li:hover{
     background-size: cover;
     height: 100%;
     z-index: 1;
+    padding: 8px;
+    background-clip: content-box;
 }
 .main-gradient{
     background: linear-gradient(to top right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.973)), url(./cover-gradient.png) no-repeat;
@@ -141,16 +143,17 @@ nav li:hover{
 }
 .side-cover{
     background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(./cover-column.png) no-repeat center;
-    background-size: cover; 
+    background-size: cover;
+    background-clip: content-box;
+    position: relative;
     width: 100%;
     height: 50%;
-    position: relative;
     padding: 8px;
 }
 .side-title{
     color: white;
     position: absolute;
-    bottom: 0;
+    bottom: 12px;
     left: 4px;
     padding: 0 20px;
 }
@@ -369,6 +372,7 @@ footer span{
     }
     .main-cover, .side-cover{
         margin-bottom: 8px;
+        background-clip: padding-box;
     }
     nav{
         height: auto;
