@@ -311,6 +311,8 @@ nav li:hover{
 .article-list li{
     color: rgb(85,85,85);
     font-size: 13px;
+    border-bottom: #555 solid 1px;
+    padding-top: 20px;
 }
 .sub{
     padding: 10px 14px 0 2px;
